@@ -3,27 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QAnswer - The Quiz App</title>
+    <title>Quiz Game - The Ultimate Trivia Experience</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>QAnswer ❓</h1>
-            <p class="subtitle">Challenge Your Knowledge</p>
-        </header>
-        <main>
-            <p class="description">
-                Welcome to QAnswer, the ultimate quiz application to test your knowledge across various topics. Answer questions, learn new facts, and climb the leaderboard!
-            </p>
-            <a href="https://play.google.com/store/apps/details?id=com.aziz.qanswer" class="cta-button">
-                Download on Google Play
-            </a>
-        </main>
-        <footer>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">Quiz Game 🏆</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#download" class="nav-button">Download</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1>The Ultimate Trivia and Quiz Experience</h1>
+                <p class="subtitle">Challenge yourself, compete with friends, and explore a universe of knowledge.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.aziz.qanswer" class="cta-button">Download on Google Play</a>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2>About The Game</h2>
+                <p>Are you ready to prove you're a trivia master? Welcome to Quiz Game, your go-to destination for endless fun and learning. Whether you want to challenge yourself with brain-teasing questions, go head-to-head with players online, or team up with friends for a social quiz night, our app has it all.</p>
+            </div>
+        </section>
+
+        <section id="features" class="content-section alt-bg">
+            <div class="container">
+                <h2>A Game Mode for Every Player</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>🏆 Quiz Zone (Solo)</h3>
+                        <p>Play through challenging levels at your own pace and learn something new every day.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>⚡ 1 vs 1 Battle</h3>
+                        <p>Get matched with an opponent from around the world for a fast-paced, real-time duel.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🎉 Group Battle</h3>
+                        <p>Create a private room with a shareable code and invite friends to find the champion.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🏅 Contest Mode</h3>
+                        <p>Join daily and weekly contests to compete on a dedicated leaderboard and win prizes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="content-section">
+            <div class="container">
+                <h2>Explore a Universe of Knowledge</h2>
+                <p>Our app features a massive, ever-growing database of over 3,400 questions across more than 20 categories!</p>
+                <div class="category-tags">
+                    <span>General Knowledge</span><span>Movies & Music</span><span>Science</span><span>History</span><span>Geography</span><span>Sports</span><span>Politics</span><span>Art</span><span>Animals</span><span>Computers</span><span>Mythology</span><span>...and many more!</span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="download" class="content-section alt-bg">
+             <div class="container">
+                <h2>What are you waiting for?</h2>
+                <p>Download Quiz Game now, challenge your mind, and start your journey to the top of the leaderboards!</p>
+                <a href="https://play.google.com/store/apps/details?id=com.aziz.qanswer" class="cta-button">Download Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
             <p>&copy; 2025 Aziz Deves. All rights reserved.</p>
-        </footer>
-    </div>
+        </div>
+    </footer>
+
 </body>
 </html>
