@@ -1,60 +1,201 @@
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #198754;
+    --background-light: #ffffff;
+    --background-alt: #f8f9fa;
+    --text-dark: #212529;
+    --text-light: #f8f9fa;
+    --border-color: #dee2e6;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; 
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    text-align: center;
+    padding-top: 75px; 
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    line-height: 1.7;
 }
 
 .container {
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-header h1 {
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    background-color: var(--background-light);
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+}
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1em;
+    transition: color 0.2s ease;
+}
+.main-nav a:hover {
+    color: var(--primary-color);
+}
+.nav-button {
+    background-color: var(--primary-color);
+    color: var(--text-light) !important;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.2s ease;
+}
+.nav-button:hover {
+    background-color: #0b5ed7;
+    color: var(--text-light) !important;
+}
+
+/* --- Hero Section --- */
+#hero {
+    background: var(--background-light);
+    padding: 60px 0;
+    text-align: center;
+}
+#hero h1 {
     font-size: 3em;
-    color: #007bff;
-    margin-bottom: 0;
+    margin-bottom: 15px;
 }
-
-.subtitle {
+#hero .subtitle {
     font-size: 1.2em;
-    color: #6c757d;
-    margin-top: 5px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #495057;
 }
 
-.description {
+/* --- Content Sections --- */
+.content-section {
+    padding: 80px 0;
+    text-align: center;
+}
+.content-section h2 {
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+.content-section > .container > p {
     font-size: 1.1em;
-    line-height: 1.6;
-    margin: 30px 0;
+    max-width: 750px;
+    margin: 0 auto 40px;
+    color: #495057;
+}
+.alt-bg {
+    background-color: var(--background-alt);
 }
 
+/* --- Features Section --- */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+.feature-card {
+    background-color: var(--background-light);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+.feature-card h3 {
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* --- Categories Section --- */
+.category-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.category-tags span {
+    background-color: #e9ecef;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+/* --- Download CTA Section --- */
 .cta-button {
     display: inline-block;
-    background-color: #28a745;
-    color: #ffffff;
-    padding: 15px 30px;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 15px 35px;
     text-decoration: none;
     font-weight: 600;
     border-radius: 50px;
-    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease;
     font-size: 1.1em;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-
 .cta-button:hover {
-    background-color: #218838;
+    background-color: #157347;
+    transform: translateY(-3px);
 }
 
-footer {
-    margin-top: 40px;
-    font-size: 0.9em;
-    color: #6c757d;
+/* --- Footer --- */
+.main-footer {
+    background-color: #212529;
+    color: var(--text-light);
+    text-align: center;
+    padding: 40px 0;
+}
+.main-footer p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Responsive Nav for smaller screens */
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
 }
